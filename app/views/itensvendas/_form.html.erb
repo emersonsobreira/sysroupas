@@ -1,0 +1,42 @@
+<%= form_with(model: itensvenda) do |form| %>
+  <% if itensvenda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(itensvenda.errors.count, "error") %> prohibited this itensvenda from being saved:</h2>
+
+      <ul>
+        <% itensvenda.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :qtd %>
+    <%= form.number_field :qtd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :produto_unitario %>
+    <%= form.text_field :produto_unitario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :preco_total %>
+    <%= form.text_field :preco_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :produto_id %>
+    <%= form.text_field :produto_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :venda_id %>
+    <%= form.text_field :venda_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

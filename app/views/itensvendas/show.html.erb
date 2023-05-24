@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Qtd:</strong>
+  <%= @itensvenda.qtd %>
+</p>
+
+<p>
+  <strong>Produto unitario:</strong>
+  <%= @itensvenda.produto_unitario %>
+</p>
+
+<p>
+  <strong>Preco total:</strong>
+  <%= @itensvenda.preco_total %>
+</p>
+
+<p>
+  <strong>Produto:</strong>
+  <%= @itensvenda.produto_id %>
+</p>
+
+<p>
+  <strong>Venda:</strong>
+  <%= @itensvenda.venda_id %>
+</p>
+
+<%= link_to 'Edit', edit_itensvenda_path(@itensvenda) %> |
+<%= link_to 'Back', itensvendas_path %>

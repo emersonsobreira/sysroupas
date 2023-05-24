@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Itens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Qtd</th>
+      <th>Produto unitario</th>
+      <th>Preco total</th>
+      <th>Produto</th>
+      <th>Venda</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itensvendas.each do |itensvenda| %>
+      <tr>
+        <td><%= itensvenda.qtd %></td>
+        <td><%= itensvenda.produto_unitario %></td>
+        <td><%= itensvenda.preco_total %></td>
+        <td><%= itensvenda.produto_id %></td>
+        <td><%= itensvenda.venda_id %></td>
+        <td><%= link_to 'Show', itensvenda %></td>
+        <td><%= link_to 'Edit', edit_itensvenda_path(itensvenda) %></td>
+        <td><%= link_to 'Destroy', itensvenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Itensvenda', new_itensvenda_path %>
