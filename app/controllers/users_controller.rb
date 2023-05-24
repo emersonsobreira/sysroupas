@@ -3,13 +3,17 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    if params[:nome] == nil
+      @users = User.all.order("users.nome ASC").page(params[:page]).per(20)
+    else
+      #variavel que recebe pesquisa solicitada pelo usuario
+      @users = User.all.where("users.nome ILIKE  '%"+params[:nome].strip+"%'").order("users.nome ASC").page(params[:page]).per(20)
+    end
   end
 
-  # GET /users/1 or /users/1.json
-  def show
-  end
-
+   # GET /users/1 or /users/1.json
+   def show
+   end
   # GET /users/new
   def new
     @user = User.new
