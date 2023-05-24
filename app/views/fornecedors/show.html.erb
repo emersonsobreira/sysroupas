@@ -1,29 +1,67 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                Visualizar Fornecedor
+            </h2>
+        </div>
+    </div>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @fornecedor.nome %>
-</p>
+<div class="row">  
+      <div class="col-lg-5 form-group"> 
+          <label class = 'control-label'>Nome</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.nome %>" />  
+      </div>
+ <div class="col-lg-5 form-group">
+          <label class = 'control-label'>Email</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.email %>" />
+       </div>
 
-<p>
-  <strong>Endereco:</strong>
-  <%= @fornecedor.endereco %>
-</p>
+<div class="col-lg-5 form-group">
+          <label class = 'control-label'>Cnpj_cpf</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.cnpj_cpf %>" />
+       </div>
 
-<p>
-  <strong>Telefone:</strong>
-  <%= @fornecedor.telefone %>
-</p>
+<div class="col-lg-3 form-group">   
+          <label class = 'control-label'>Telefone</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.telefone %>" />
+      </div>
 
-<p>
-  <strong>Cpf:</strong>
-  <%= @fornecedor.cpf %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @fornecedor.email %>
-</p>
+ <div class="col-lg-3 form-group">   
+           <label class = 'control-label'>Logradouro</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.logradouro %>" />
+       </div>
+<div class="col-lg-4 form-group">   
+           <label class = 'control-label'>Cidade</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.cidade %>" />
+       </div>
 
-<%= link_to 'Edit', edit_fornecedor_path(@fornecedor) %> |
-<%= link_to 'Back', fornecedors_path %>
+<div class="col-lg-5 form-group">
+          <label class = 'control-label'>Bairro</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.bairro %>" />
+       </div>
+ <div class="col-lg-2 form-group">   
+           <label class = 'control-label'>Número</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.numero %>" />
+       </div>
+
+
+
+ <div class="col-lg-3 form-group">   
+           <label class = 'control-label'>CEP</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.cep %>" />
+       </div>
+
+ <div class="col-lg-3 form-group">   
+           <label class = 'control-label'>Estado</label>
+          <input readonly="true" class = 'form-control' value="<%= @fornecedor.estado %>" />
+       </div>
+       
+    </div>
+ <div class="row">
+                <div class="col-lg-7 form-group">  
+                  <%= link_to 'Alterar Fornecedor', edit_fornecedor_path(@fornecedor), :class => "btn btn-primary colorprimarybtn" %>
+                  <%= link_to 'Voltar',  fornecedors_path, :class => "btn btn-primary colorprimarybtn"%>
+                </div>
+    </div>
