@@ -26,7 +26,12 @@ ActiveRecord::Schema.define(version: 2023_05_24_124217) do
 
   create_table "fornecedors", force: :cascade do |t|
     t.string "nome"
-    t.string "endereco"
+    t.string "logradouro"
+    t.string "numero"
+    t.string "bairro"
+    t.string "cidade"
+    t.string "estado"
+    t.string "cep"
     t.string "telefone"
     t.string "cpf"
     t.string "email"
