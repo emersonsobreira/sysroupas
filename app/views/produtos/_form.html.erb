@@ -43,7 +43,7 @@
   
        <div class="col-lg-4 form-group">   
            <%= form.label :fornecedor, :class => 'control-label required' %>
-           <%= form.text_field :fornecedor,  :class => 'form-control' %>
+           <%= form.collection_select :fornecedor_id, Fornecedor.all, :id, :nome, {:prompt => 'Selecionar'}, :class => 'form-control' %>
        </div>
       </div>
    <div class="row">
