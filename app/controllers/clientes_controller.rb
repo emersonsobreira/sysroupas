@@ -3,7 +3,12 @@ class ClientesController < ApplicationController
 
   # GET /clientes or /clientes.json
   def index
-    @clientes = Cliente.all
+    if params[:nome] == nil
+      @clientes =  Cliente.all.order("clientes.nome ASC").page(params[:page]).per(20)
+    else
+      #variavel que recebe pesquisa solicitada pelo usuario
+      @clientes = Cliente.all.where("clientes.nome ILIKE  '%"+params[:nome].strip+"%'").order("cliente.nome ASC").page(params[:page]).per(20)
+    end
   end
 
   # GET /clientes/1 or /clientes/1.json

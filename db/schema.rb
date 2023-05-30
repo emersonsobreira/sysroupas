@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2023_05_24_124217) do
     t.string "nome"
     t.integer "qtd"
     t.string "tamanho"
+    t.string "tipo"
+    t.string "marca"
     t.float "preco"
     t.bigint "fornecedor_id", null: false
     t.datetime "created_at", precision: 6, null: false
