@@ -30,14 +30,14 @@
 
   
        <div class="col-lg-3 form-group">   
-           <%= form.label :TipoPagamento, :class => 'control-label required' %>
-           <%= form.text_field :TipoPagamento,  :class => 'form-control' %>
+           <%= form.label :tipoPagamento, :class => 'control-label required' %>
+           <%= form.text_field :tipoPagamento,  :class => 'form-control' %>
        </div>
 
   
        <div class="col-lg-4 form-group">   
-           <%= form.label :Cliente, :class => 'control-label required' %>
-           <%= form.text_field :cliente,  :class => 'form-control' %>
+           <%= form.label :cliente_id, :class => 'control-label required' %>
+           <%= form.collection_select :cliente_id, Cliente.all, :id, :nome, {:prompt => 'Selecionar'}, :class => 'form-control' %>
        </div>
        </div>
   

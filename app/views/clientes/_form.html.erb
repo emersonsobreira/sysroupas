@@ -21,7 +21,7 @@
        </div>
         <div class="col-lg-4 form-group">   
            <%= form.label :cpf, :class => 'control-label required' %>
-           <%= form.text_field :telefone, :class => 'form-control', :onkeypress=>"mask(this, mphone);", :onblur=>"mask(this, mphone);" %>
+           <%= form.text_field :cpf, :class => 'form-control', :onkeypress=>"mask(this, mphone);", :onblur=>"mask(this, mphone);" %>
        </div>
   </div>
 
@@ -29,8 +29,12 @@
  
         <div class="col-lg-5 form-group">   
            <%= form.label :endereco, :class => 'control-label' %>
-           <%= form.text_field :email, :class => 'form-control' %>
+           <%= form.text_field :endereco, :class => 'form-control' %>
        </div>
+       <div class="col-lg-5 form-group">   
+       <%= form.label :email, :class => 'control-label' %>
+       <%= form.text_field :email, :class => 'form-control' %>
+   </div>
        </div>
 
   <div class="row">

@@ -2,7 +2,7 @@
   <% if user.errors.any? %>
     <div id="error_explanation" class="panel panel-danger mensagem-erro-cabecalho">
            <div class="panel-heading">
-               <h3 class="panel-title"><%= pluralize(usererrors.count, "error(s)") %> ao salvar user:</h3>
+               <h3 class="panel-title"><%= pluralize(user.errors.count, "error(s)") %> ao salvar user:</h3>
             </div>
            <div class="panel-body">
              <ul>
@@ -32,8 +32,8 @@
            <%= form.text_field :email, :class => 'form-control' %>
        </div>
        <div class="col-lg-3 form-group">   
-           <%= form.label :senha, :class => 'control-label' %>
-           <%= form.password_field :senha, :class => 'form-control' %>
+           <%= form.label :password, :class => 'control-label' %>
+           <%= form.password_field :password, :class => 'form-control' %>
        </div>
   </div>
 <div class="row">

@@ -25,3 +25,6 @@ pt-BR:
       produto:
           preco: "Preço"
           quantidade: "Qtd Itens"
+      cliente:
+          endereco: "Endereço"
+          
