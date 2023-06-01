@@ -3,7 +3,15 @@ class VendasController < ApplicationController
 
   # GET /vendas or /vendas.json
   def index
-    @vendas = Venda.all
+   
+    if params[:nome] == nil
+      @vendas = Venda.all.order("vendas.id DESC").page(params[:page]).per(20)
+    else
+      #variavel que recebe pesquisa solicitada pelo usuario
+      @vendas = Venda.all
+      .joins(:cliente)
+      .where("clientes.nome ILIKE  '%"+params[:nome].strip+"%'").order("vendas.id DESC").page(params[:page]).per(20)
+    end
   end
 
   # GET /vendas/1 or /vendas/1.json

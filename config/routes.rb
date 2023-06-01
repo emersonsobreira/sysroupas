@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     end
   end
   resources :vendas
-  resources :fornecedors
+  resources :fornecedors, :path => "fornecedors" do
+    collection do
+      get "/relatorio"  => "fornecedors#relatorio", :as => "relatorio" 
+    end
+  end
 
   root "produtos#index"
 end

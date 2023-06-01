@@ -22,6 +22,7 @@
 <table class="table table-hover table-striped" cellpadding="0" cellspacing="0">
     <thead>
     <tr>
+    <th>Cod</th>
     <th>Data</th>
     <th>Cpf</th>
     <th>Total</th>
@@ -34,11 +35,12 @@
   <tbody>
     <% @vendas.each do |venda| %>
       <tr>
+      <td><%= venda.id %></td>
         <td><%= venda.data_venda %></td>
         <td><%= venda.cpf %></td>
         <td><%= venda.total %></td>
         <td><%= venda.tipoPagamento %></td>
-        <td><%= venda.cliente_id %></td>
+        <td><%= venda.cliente.nome %></td>
         <td><%= link_to 'visualizar', venda %></td>
         <td><%= link_to 'Editar', edit_venda_path(venda) %></td>
         <td><%= link_to 'Excluir', venda, method: :delete, data: { confirm: 'deseja excluir esse registro?' } %></td>

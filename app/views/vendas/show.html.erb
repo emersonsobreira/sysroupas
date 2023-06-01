@@ -9,8 +9,8 @@
 
 <div class="row">  
       <div class="col-lg-5 form-group"> 
-          <label class = 'control-label'>Nome</label>
-          <input readonly="true" class = 'form-control' value="<%= @venda.nome %>" />  
+          <label class = 'control-label'>Data da Venda</label>
+          <input readonly="true" class = 'form-control' value="<%= @venda.data_venda %>" />  
       </div>
 
 <div class="col-lg-5 form-group">
@@ -26,9 +26,9 @@
 
  <div class="col-lg-3 form-group">   
            <label class = 'control-label'>TipoPagamento</label>
-          <input readonly="true" class = 'form-control' value="<%= @fornecedor.TipoPagamento %>" />
+          <input readonly="true" class = 'form-control' value="<%= @venda.tipoPagamento %>" />
        </div>
-
+       </div>
  <div class="row">
                 <div class="col-lg-7 form-group">  
                   <%= link_to 'Alterar Venda', edit_venda_path(@venda), :class => "btn btn-primary colorprimarybtn" %>
