@@ -19,10 +19,12 @@
            <%= form.label :nome, :class => 'control-label required' %>
            <%= form.text_field :nome,  :class => 'form-control' %>
        </div>
-        <div class="col-lg-4 form-group">   
-           <%= form.label :cpf, :class => 'control-label required' %>
-           <%= form.text_field :cpf, :class => 'form-control', :onkeypress=>"mask(this, mphone);", :onblur=>"mask(this, mphone);" %>
+       
+       <div class="col-lg-3 form-group">   
+           <%= form.label :cpf, :class => 'control-label' %>
+           <%= form.text_field :cpf,  :class => 'form-control' %>
        </div>
+
   </div>
 
 <div class="row">

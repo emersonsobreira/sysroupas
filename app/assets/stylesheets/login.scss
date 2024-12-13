@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #27EF9F;
+    --secondary-color: #0DB8DE;
+    --text-color: #333;
+    --background-color: #F4F6F9;
+  }
+  
+  body {
+    background: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+  }
+  
+  .container {
+    padding: 30px 0;
+  }
+  
+  .login-box {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  .form-control {
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  
+  .form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(13, 184, 222, 0.5);
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  #flash_alert {
+    color: #ff3b30;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 767px) {
+    .login-box {
+      padding: 15px;
+    }
+  
+    .form-control {
+      font-size: 14px;
+    }
+  
+    .btn-primary {
+      font-size: 14px;
+    }
+  }
+  

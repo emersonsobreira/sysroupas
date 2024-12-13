@@ -1,45 +1,45 @@
-<%= form_with(model: user) do |form| %>
-  <% if user.errors.any? %>
+<%= form_for(@user, url: user_registration_path, html: { method: :post }) do |form| %>
+  <% if @user.errors.any? %>
     <div id="error_explanation" class="panel panel-danger mensagem-erro-cabecalho">
-           <div class="panel-heading">
-               <h3 class="panel-title"><%= pluralize(user.errors.count, "error(s)") %> ao salvar user:</h3>
-            </div>
-           <div class="panel-body">
-             <ul>
-             <% user.errors.full_messages.each do |message| %>
-               <li><%= message %></li>
-             <% end %>
-             </ul>
-           </div>
-         </div>
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@user.errors.count, "error(s)") %> ao salvar user:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   <% end %>
 
-<div class="row">
-       <div class="col-lg-8 form-group">   
-           <%= form.label :nome, :class => 'control-label required' %>
-           <%= form.text_field :nome,  :class => 'form-control' %>
-       </div>
-        <div class="col-lg-4 form-group">   
-           <%= form.label :telefone, :class => 'control-label required' %>
-           <%= form.text_field :telefone, :class => 'form-control', :onkeypress=>"mask(this, mphone);", :onblur=>"mask(this, mphone);" %>
-       </div>
+  <div class="row">
+    <div class="col-lg-8 form-group">
+      <%= form.label :nome, class: 'control-label required' %>
+      <%= form.text_field :nome, class: 'form-control' %>
+    </div>
+    <div class="col-lg-4 form-group">
+      <%= form.label :telefone, class: 'control-label required' %>
+      <%= form.text_field :telefone, class: 'form-control', onkeypress: "mask(this, mphone);", onblur: "mask(this, mphone);" %>
+    </div>
   </div>
 
-<div class="row">
-      
-        <div class="col-lg-5 form-group">   
-           <%= form.label :email, :class => 'control-label' %>
-           <%= form.text_field :email, :class => 'form-control' %>
-       </div>
-       <div class="col-lg-3 form-group">   
-           <%= form.label :password, :class => 'control-label' %>
-           <%= form.password_field :password, :class => 'form-control' %>
-       </div>
+  <div class="row">
+    <div class="col-lg-5 form-group">
+      <%= form.label :email, class: 'control-label' %>
+      <%= form.text_field :email, class: 'form-control' %>
+    </div>
+    <div class="col-lg-3 form-group">
+      <%= form.label :password, class: 'control-label' %>
+      <%= form.password_field :password, class: 'form-control' %>
+    </div>
   </div>
-<div class="row">
-          <div class="col-lg-6 form-group">  
-            <%= link_to 'Voltar', users_path, :class => "btn btn-primary colorprimarybtn"%>
-            <input type="submit" name="commit" class="btn btn-primary colorprimarybtn" value="Salvar " data-disable-with="Salvando" />
-          </div>
-      </div>
-   <% end %>  
+
+  <div class="row">
+    <div class="col-lg-6 form-group">
+      <%= link_to 'Voltar', users_path, class: "btn btn-primary colorprimarybtn" %>
+      <%= form.submit "Salvar", class: "btn btn-primary colorprimarybtn", data: { disable_with: "Salvando" } %>
+    </div>
+  </div>
+<% end %>

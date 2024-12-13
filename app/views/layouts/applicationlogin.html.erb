@@ -15,7 +15,7 @@
     @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
     </style>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
     <!-- Font Awesome JS -->
@@ -24,36 +24,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 
-  <style>
+    <style>
+        :root {
+            --colorbasiclogin: #fff;
+            --colortextlogin: var(--colortext-menu); 
+        }
 
-    :root {
-        --colorbasiclogin: #fff;
-        --colortextlogin: var(--colortext-menu); 
-    }
-
-      body {
-        background: #FFF;
-        font-family: 'Roboto', sans-serif;
-    }
-  </style>
+        body {
+            background: #FFF;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #185a94;  margin-bottom: 0px;">
-    </nav>
-       
-  
-
     <div class="wrapper">
         <div class="content container-fluid">
             <div class="container-fluid">
-              <%= yield %>
+                <%= yield %>
             </div>
-          </div>
+        </div>
     </div>
 
-  <%= render :partial => 'layouts/utilscripts' %>
-   
+    <%= render :partial => 'layouts/utilscripts' %>
 </body>
 
 </html>

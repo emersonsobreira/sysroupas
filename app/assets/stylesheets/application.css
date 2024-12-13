@@ -1,32 +1,128 @@
-/*
-    DEMO STYLE
-    azul
-     --colorbasic: #004ba0;
-    --colorbasic2: #1976d2;
 
-    verde
+@import 'custom';
 
-        --colorbasic: #00675b;
-    --colorbasic2: #009688;
-     --colorbasic2: #5ba59d;
+:root {
+    --primary-color: #1f6fbb; /* Azul principal */
+    --primary-hover-color: #185a94; /* Azul escuro */
+    --text-color: #ffffff; /* Branco */
+    --bg-color: #f8f9fa; /* Cinza claro */
+    --input-border-color: #cccccc; /* Cinza para bordas */
+    --input-focus-color: #1f6fbb; /* Azul ao focar */
+}
 
-    vermelho 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    --colorbasic: #c4001d;
-    --colorbasic2: #ff1744;
+.container {
+    max-width: 100%;
+    padding: 20px;
+}
 
-    preto 
-     --colorbasic: #1b0000;
-    --colorbasic2: #3e2723;
+.login-box {
+    width: 300px; /* Diminua o valor para ajustar */
+    height: auto; /* Ajusta automaticamente a altura */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: #ffffff; /* Fundo branco */
+}
+.navbar-toggler {
+    display: none;
+}
 
-    cinza
+.login-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
 
-      --colorbasic: #8d8d8d;
-    --colorbasic2: #bdbdbd;
-amarelo
-        --colorbasic: #c6a700;
-    --colorbasic2: #fdd835;
-*/
+.login-form {
+    margin-top: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--input-focus-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(31, 111, 187, 0.5);
+}
+
+button, .btn {
+    padding: 8px 12px; /* Ajuste do tamanho do botão */
+    font-size: 14px; /* Tamanho do texto */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+
+.btn-primary {
+    padding: 10px 16px; /* Ajuste do preenchimento */
+    font-size: 14px; /* Tamanho do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+}
+
+#flash_alert {
+    color: #e74c3c; /* Vermelho */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        padding: 20px;
+    }
+
+    .login-title {
+        font-size: 20px;
+    }
+
+    .form-control {
+        font-size: 13px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+    }
+}
+
 
 :root {
     --colorbasic: #185a94;

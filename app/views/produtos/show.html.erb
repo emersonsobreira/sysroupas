@@ -1,15 +1,23 @@
+<div class="container-fluid">
 <p id="notice"><%= notice %></p>
 
 <div class="row">  
       <div class="col-lg-8 form-group"> 
+      <h2 class= "page-header">
+        Visualizar Produto
+        </h2>
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-5 form-group"> 
           <label class = 'control-label'>Nome</label>
           <input readonly="true" class = 'form-control' value="<%= @produto.nome %>" />  
       </div>
-     
- 
+      
       <div class="col-lg-2 form-group"> 
-          <label class = 'control-label'>Tipo</label>
-          <input readonly="true" class = 'form-control' value="<%= @produto.tipo %>" />  
+          <label class = 'control-label'>Tamanho</label>
+          <input readonly="true" class = 'form-control' value="<%= @produto.tamanho %>" />  
       </div>
     
       <div class="col-lg-2 form-group"> 
@@ -35,9 +43,9 @@
           <input readonly="true" class = 'form-control' value="<%= @produto.fornecedor.nome %>" />  
       </div>
       </div>
-<div class="row">
-                <div class="col-lg-7 form-group">  
-                  <%= link_to 'Alterar Produto', edit_produto_path(@produto), :class => "btn btn-primary colorprimarybtn" %>
-                  <%= link_to 'Voltar',  produto_path, :class => "btn btn-primary colorprimarybtn"%>
-                </div>
-    </div>
+      <div class="row">
+      <div class="col-lg-7 form-group">  
+        <%= link_to 'Alterar Produto', edit_produto_path(@produto), :class => "btn btn-primary colorprimarybtn" %>
+        <%= link_to 'Voltar',  produtos_path, :class => "btn btn-primary colorprimarybtn"%>
+      </div>
+</div>
