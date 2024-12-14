@@ -1,24 +1,18 @@
-# README
+Gerenciador de Produtos e Fornecedores
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este é um sistema desenvolvido em Ruby on Rails para gerenciar produtos, fornecedores e usuários. A aplicação oferece autenticação de usuários utilizando Devise e permite realizar operações CRUD completas para produtos, fornecedores e outros módulos.
 
-Things you may want to cover:
+Funcionalidades
+Autenticação de Usuários:
 
-* Ruby version
+Gerenciado pelo Devise, com suporte a registro, login, recuperação de senha e edição de perfil.
+Gestão de Produtos:
 
-* System dependencies
+Cadastro, edição, exclusão e visualização de produtos.
+Geração de relatórios personalizados sobre produtos.
+Gestão de Fornecedores:
 
-* Configuration
+CRUD completo para fornecedores, incluindo visualização e edição de dados.
+Interface Intuitiva:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Roteamento simplificado e URLs amigáveis para melhor navegação.
